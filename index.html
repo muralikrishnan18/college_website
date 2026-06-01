@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome || M.A.A.S College</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+/* Header */
+
+.top-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:#f8f8f8;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:90px;
+}
+
+.college-name{
+    text-align:center;
+}
+
+.college-name h1{
+    color:#173b86;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.college-name p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+.apply-btns{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.apply-btns button{
+    background:#ae52b1;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Social Bar */
+
+.social-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:#fff;
+}
+.navbar1{
+    background:#ffffff;
+}
+
+.navbar1 ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+}
+
+.navbar1 ul li{
+    position:relative;
+}
+
+.navbar1 ul li a{
+    text-color:rgb(0, 0, 0);
+    text-decoration:none;
+    display:block;
+    padding:20px 25px;
+    font-size:18px;
+}
+
+.navbar1 ul li a:hover{
+    background:#f7c400;
+    color:#000;
+}
+
+.social-icons i{
+    font-size:28px;
+    margin-right:20px;
+    color:#801786;
+    cursor:pointer;
+}
+
+.search-box input{
+    padding:10px;
+    width:250px;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#600766;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+}
+
+.navbar ul li{
+    position:relative;
+}
+
+.navbar ul li a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:20px 25px;
+    font-size:18px;
+}
+
+.navbar ul li a:hover{
+    background:#f7c400;
+    color:#000;
+}
+
+/* Hero Section */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:550px;
+    padding:50px;
+    background:#f8f8f8;
+}
+
+.hero-content{
+    width:50%;
+}
+
+.hero-content h2{
+    color:#b1112f;
+    font-size:80px;
+    font-weight:bold;
+    line-height:1.1;
+}
+
+.hero-content h3{
+    color:#590766;
+    font-size:45px;
+    margin-top:20px;
+}
+
+.hero-content button{
+    margin-top:30px;
+    background:#f7c400;
+    border:none;
+    padding:15px 40px;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.hero-image{
+    width:45%;
+}
+
+.hero-image img{
+    width:100%;
+}
+
+/* Vertical Enquiry Button */
+
+.enquiry{
+    position:fixed;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    background:#0056f7;
+    padding:15px;
+    writing-mode:vertical-rl;
+    text-orientation:mixed;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+@media(max-width:992px){
+
+.top-header{
+    flex-direction:column;
+    text-align:center;
+    gap:20px;
+}
+
+.hero{
+    flex-direction:column;
+}
+
+.hero-content,
+.hero-image{
+    width:100%;
+    text-align:center;
+}
+
+.hero-content h2{
+    font-size:50px;
+}
+
+.hero-content h3{
+    font-size:30px;
+}
+
+.navbar ul{
+    flex-wrap:wrap;
+}
+
+}
+
+.programs-section{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.sub-title{
+    color:#173b86;
+    font-size:32px;
+    font-weight:300;
+}
+
+.main-title{
+    color:#072b66;
+    font-size:60px;
+    margin-bottom:25px;
+}
+
+.program-desc{
+    max-width:1100px;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:50px;
+}
+
+.program-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#f2f2f2;
+    padding:40px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.icon{
+    font-size:70px;
+    color:#d9a000;
+    margin-bottom:30px;
+}
+
+.card h2{
+    color:#072b66;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:18px;
+    line-height:1.8;
+    color:#222;
+    margin-bottom:25px;
+}
+
+.card a{
+    text-decoration:none;
+    color:#072b66;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.card a:hover{
+    color:#d9a000;
+}
+
+@media(max-width:992px){
+
+.program-cards{
+    grid-template-columns:1fr;
+}
+
+.main-title{
+    font-size:40px;
+}
+
+.sub-title{
+    font-size:24px;
+}
+
+}
+.community-section{
+    padding:80px 5%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.small-heading{
+    font-size:22px;
+    font-weight:500;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.main-heading{
+    font-size:55px;
+    font-weight:700;
+    color:#d8a419;
+    margin-bottom:50px;
+}
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    overflow:hidden;
+}
+
+.gallery-item{
+    height:430px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+.slider-dots{
+    margin:25px 0;
+}
+
+.slider-dots span{
+    width:12px;
+    height:12px;
+    background:#cfcfcf;
+    display:inline-block;
+    border-radius:50%;
+    margin:0 6px;
+}
+
+.slider-dots span.active{
+    background:#d8a419;
+}
+
+.community-text{
+    max-width:1200px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+    color:#111;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .gallery-container{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:300px;
+    }
+
+    .main-heading{
+        font-size:35px;
+    }
+
+    .community-text{
+        font-size:18px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+
+<header class="top-header">
+
+<div class="logo">
+    <img src="logo.png" alt="College Logo">
+</div>
+
+<div class="college-name">
+    <h1> Murali Arts and Science College</h1>
+    <p>
+        Affiliated to University | NAAC Accredited with Grade A+
+          </p>
+          <p>
+        A Co-educational Institution , Tambaram , Chennai 600 045.</p>
+  
+</div>
+
+<div class="apply-btns">
+    <button>Apply Now</button>
+    <button>Admission Open 2026-27</button>
+</div>
+
+</header>
+
+<!-- Social Bar -->
+
+<div class="social-bar">
+
+<div class="social-icons">
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-linkedin"></i>
+    <i class="fab fa-youtube"></i>
+    </div>
+    <div>
+        <nav class="navbar1">
+    <ul>
+    <li><a href="#">UGC</a></li>
+    <li><a href="#">Library</a></li>
+    <li><a href="#">FeedBack</a></li>
+    <li><a href="#">Alumni</a></li>
+    <li><a href="#">IQAC</a></li>
+    <li><a href="#">IIC</a></li>
+     <li><a href="#">RTI</a></li>
+      <details>
+    <summary style="color:rgb(187, 0, 255); font-weight:bold; cursor:pointer;">
+      Campus Portal ▼
+    </summary>
+    <ul style="list-style:none; padding-left:15px; margin:5px 0;">
+      <li><a href="student_login.php">Student Login</a></li>
+      <li><a href="staff_login.php">Staff Login</a></li>
+    </ul>
+  </details>
+    </ul>
+    </nav>
+</div>
+<div class="search-box">
+    <input type="text" placeholder="Search">
+</div>
+
+</div>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+<ul>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Admissions</a></li>
+<li><a href="#">Academics</a></li>
+<li><a href="#">Career Development</a></li>
+<li><a href="#">Campus Life</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Contact Us</a></li>
+</ul>
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<div class="hero-content">
+    <h2>
+        ADMISSIONS<br>
+        OPEN 2026-27
+    </h2>
+
+    <h3>(Self Financing Stream)</h3>
+
+    <button>Know More</button>
+</div>
+
+<div class="hero-image">
+    <img src="campus.png" alt="Campus">
+</div>
+
+</section>
+
+<!-- Enquiry Button -->
+
+<div class="enquiry">
+Admissions Enquiry
+</div>
+<section class="programs-section">
+
+    <div class="container">
+
+        <h3 class="sub-title">Explore Our Flagship Programs</h3>
+        <h1 class="main-title">Transform Your Future</h1>
+
+        <p class="program-desc">
+            Unleash your potential with our diverse programs! From cutting-edge
+            technology to enriching humanities, discover our range of courses
+            tailored to sculpt your future.
+        </p>
+
+        <div class="program-cards">
+
+            <!-- Commerce -->
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+
+                <h2>School of Commerce</h2>
+
+                <p>
+                    The School of Commerce offers a comprehensive range of
+                    courses for those intrigued by financial intricacies,
+                    accounting, banking, marketing and entrepreneurship.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+            <!-- Arts -->
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+
+                <h2>School of Arts</h2>
+
+                <p>
+                    At the School of Arts, we provide a boundless platform for
+                    creative minds. Explore literature, history, languages and
+                    visual arts while nurturing innovation.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+            <!-- Science -->
+
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-atom"></i>
+                </div>
+
+                <h2>School of Science</h2>
+
+                <p>
+                    Delve into the realms of science and environmental studies.
+                    Our programs transform students into responsible and
+                    research-oriented professionals.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="community-section">
+
+    <div class="container">
+
+        <h4 class="small-heading">
+            Join Our Vibrant Community
+        </h4>
+
+        <h2 class="main-heading">
+            The M.A.A.S COLLEGE  Awaits You
+        </h2>
+
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="Campus.webp" alt="Campus Building">
+            </div>
+
+            <div class="gallery-item">
+                <img src="aerial.webp" alt="Indoor Stadium">
+            </div>
+
+            <div class="gallery-item">
+                <img src="indoor.webp" alt="Aerial View">
+            </div>
+
+        </div>
+
+        <div class="slider-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+        </div>
+
+        <p class="community-text">
+            Become a part of our dynamic college family. Experience vibrant
+            campus life, forge lifelong connections, and create memories that
+            last a lifetime.
+        </p>
+
+    </div>
+    </section>
+    
+</body>
+</html>
